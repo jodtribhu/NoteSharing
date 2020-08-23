@@ -98,6 +98,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Sign In"
+                android:onClick="SignIn"
                 android:textAlignment="center" />
 
             <TextView
