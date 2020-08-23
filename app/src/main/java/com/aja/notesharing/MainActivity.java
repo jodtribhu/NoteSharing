@@ -2,7 +2,6 @@ package com.aja.notesharing;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +18,7 @@ Button button;
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+                Intent intent=new Intent(MainActivity.this, SignInActivity.class);
                 startActivity(intent);
             }
         });

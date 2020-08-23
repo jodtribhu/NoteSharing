@@ -6,7 +6,7 @@
 
     android:layout_height="match_parent"
     android:background="@drawable/b8"
-    tools:context=".LoginActivity">
+    tools:context=".SignInActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardviewlogin"
@@ -108,7 +108,7 @@
                 android:layout_weight="1"
                 android:text="Create An account"
                 android:textAlignment="center"
-                android:textColor="#ffffff" />
+                />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
