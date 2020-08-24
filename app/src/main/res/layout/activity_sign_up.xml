@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
     android:background="@drawable/b8"
-    tools:context=".SignInActivity">
+    tools:context=".SignUpActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardviewsignup"
@@ -129,6 +128,7 @@
                 android:layout_weight="1"
                 android:text="Already have an account. Sign in."
                 android:textAlignment="center"
+                android:onClick="Back_to_sign_in"
                 />
 
         </LinearLayout>
