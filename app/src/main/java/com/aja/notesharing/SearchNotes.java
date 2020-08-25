@@ -24,14 +24,13 @@ public class SearchNotes extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId())
                 {
-                    case R.id.dashboard:startActivity(new Intent(getApplicationContext(),Dashboard.class));
+                    case R.id.profile:startActivity(new Intent(getApplicationContext(), Profile.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.Add:startActivity(new Intent(getApplicationContext(),Add_notes.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.profile:startActivity(new Intent(getApplicationContext(),MainActivity.class));
-
+                    case R.id.dashboard:startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         overridePendingTransition(0,0);
                         return true;
                 }
