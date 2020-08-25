@@ -3,6 +3,7 @@ package com.aja.notesharing;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -18,7 +19,7 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
+        notesrecyclerview=findViewById(R.id.notes_recycler_view);
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.profile);
 
@@ -42,9 +43,9 @@ public class Profile extends AppCompatActivity {
         });
 
         //Recycler View
-        notesrecyclerview=findViewById(R.id.notes_recycler_view);
+
         notesrecyclerview.setAdapter(notesadapter);
-        RecyclerView.LayoutManager manager=new GridLayoutManager(this,3);
-        notesrecyclerview.setLayoutManager(manager);
+        notesrecyclerview.setLayoutManager(new LinearLayoutManager(this));
+        notesrecyclerview.setHasFixedSize(true);
     }
 }

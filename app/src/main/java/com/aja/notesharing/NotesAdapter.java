@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,7 +21,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesHolder>
 
     @Override
     public void onBindViewHolder(@NonNull NotesAdapter.NotesHolder holder, int position) {
-        holder.notesimage.setImageResource(R.drawable.fox);
+        holder.notesText.setText("Hello");
     }
 
     @Override
@@ -28,11 +29,11 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesHolder>
         return 1;
     }
 
-    class NotesHolder extends RecyclerView.ViewHolder{
-        ImageView notesimage;
+     class NotesHolder extends RecyclerView.ViewHolder{
+        TextView notesText;
         public NotesHolder(@NonNull View itemView) {
             super(itemView);
-            notesimage=itemView.findViewById(R.id.note_picture);
+            notesText=itemView.findViewById(R.id.notestext);
         }
     }
 }
