@@ -3,6 +3,6 @@
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#424242</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="bottom">#007B807F</color>
-    <color name="bottomicons">#DFE4E4</color>
+    <color name="bottom">#03DAC5</color>
+
 </resources>

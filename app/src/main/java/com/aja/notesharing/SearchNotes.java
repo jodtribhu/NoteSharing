@@ -19,23 +19,24 @@ public class SearchNotes extends AppCompatActivity {
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.Searches);
 
-        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onNavigationItemReselected(@NonNull MenuItem menuItem) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId())
                 {
                     case R.id.dashboard:startActivity(new Intent(getApplicationContext(),Dashboard.class));
                         overridePendingTransition(0,0);
-                        break;
+                        return true;
                     case R.id.Add:startActivity(new Intent(getApplicationContext(),Add_notes.class));
                         overridePendingTransition(0,0);
-                        break;
+                        return true;
                     case R.id.profile:startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                        overridePendingTransition(0,0);
-                        break;
-                }
-            }
 
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
+            }
         });
 
     }

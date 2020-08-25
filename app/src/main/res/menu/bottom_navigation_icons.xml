@@ -4,7 +4,7 @@
         <item
             android:title="Dashboard"
             android:id="@+id/dashboard"
-            android:icon="@drawable/bottom_icon_dashboard"/>
+            android:icon="@drawable/dashboard_selector"/>
         <item
             android:title="Search"
             android:id="@+id/Searches"
@@ -12,10 +12,10 @@
         <item
             android:title="Profile"
             android:id="@+id/profile"
-            android:icon="@drawable/bottom_icon_person"/>
+            android:icon="@drawable/person_selector"/>
         <item
             android:title="Add"
             android:id="@+id/Add"
-            android:icon="@drawable/bottom_icon_add"/>
+            android:icon="@drawable/add_selector"/>
     </group>
 </menu>

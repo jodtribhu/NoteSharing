@@ -19,23 +19,24 @@ public class Dashboard extends AppCompatActivity {
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.dashboard);
 
-        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onNavigationItemReselected(@NonNull MenuItem menuItem) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId())
                 {
                     case R.id.profile:startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        menuItem.setIcon(R.drawable.bottom_icon_person_outline);
                         overridePendingTransition(0,0);
-                        break;
+                        return true;
                     case R.id.Add:startActivity(new Intent(getApplicationContext(),Add_notes.class));
                         overridePendingTransition(0,0);
-                        break;
+                        return true;
                     case R.id.Searches:startActivity(new Intent(getApplicationContext(),SearchNotes.class));
                         overridePendingTransition(0,0);
-                        break;
+                        return true;
                 }
+                return false;
             }
-
         });
 
 
