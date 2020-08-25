@@ -10,7 +10,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesHolder> {
+
+    List<Integer> images;
+    public NotesAdapter(List<Integer> notesimages) {
+        images=notesimages;
+    }
 
     @NonNull
     @Override
@@ -21,19 +28,19 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesHolder>
 
     @Override
     public void onBindViewHolder(@NonNull NotesAdapter.NotesHolder holder, int position) {
-        holder.notesText.setText("Hello");
+        holder.notes.setImageResource(images.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return 1;
+        return images.size();
     }
 
      class NotesHolder extends RecyclerView.ViewHolder{
-        TextView notesText;
+        ImageView notes;
         public NotesHolder(@NonNull View itemView) {
             super(itemView);
-            notesText=itemView.findViewById(R.id.notestext);
+            notes=itemView.findViewById(R.id.notesView);
         }
     }
 }
