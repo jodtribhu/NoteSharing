@@ -4,18 +4,18 @@
         <item
             android:title="Dashboard"
             android:id="@+id/dashboard"
-            android:icon="@drawable/ic_baseline_dashboard_24"/>
+            android:icon="@drawable/bottom_icon_dashboard"/>
         <item
-            android:title="Favourites"
-            android:id="@+id/favourites"
-            android:icon="@drawable/ic_baseline_favorite_24"/>
+            android:title="Search"
+            android:id="@+id/Searches"
+            android:icon="@drawable/bottom_icon_search"/>
         <item
             android:title="Profile"
             android:id="@+id/profile"
-            android:icon="@drawable/ic_baseline_perm_identity_24"/>
+            android:icon="@drawable/bottom_icon_person"/>
         <item
-            android:title="About"
-            android:id="@+id/about_app"
-            android:icon="@drawable/ic_baseline_info_24"/>
+            android:title="Add"
+            android:id="@+id/Add"
+            android:icon="@drawable/bottom_icon_add"/>
     </group>
 </menu>

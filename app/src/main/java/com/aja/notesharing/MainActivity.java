@@ -19,17 +19,25 @@ Button button;
         setContentView(R.layout.activity_main);
 
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.dashboard);
+        bottomNavigationView.setSelectedItemId(R.id.profile);
 
         bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId())
                 {
-                    case R.id.about_app:startActivity(new Intent(getApplicationContext(),SearchNotes.class));
-                    case R.id.profile:startActivity(new Intent(getApplicationContext(),Add_notes.class));
+                    case R.id.dashboard:startActivity(new Intent(getApplicationContext(),Dashboard.class));
+                                        overridePendingTransition(0,0);
+                                        break;
+                    case R.id.Add:startActivity(new Intent(getApplicationContext(),Add_notes.class));
+                                    overridePendingTransition(0,0);
+                                        break;
+                    case R.id.Searches:startActivity(new Intent(getApplicationContext(),SearchNotes.class));
+                                         overridePendingTransition(0,0);
+                                        break;
                 }
             }
+
         });
 
     }
