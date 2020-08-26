@@ -23,121 +23,155 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="410dp"
-        android:layout_height="248dp"
-        app:cardBackgroundColor="#909C9898"
+        android:layout_width="0dp"
+        android:layout_height="306dp"
+        app:cardBackgroundColor="#5B5E5959"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/llContent"
-            android:layout_width="match_parent"
-            android:layout_height="227dp"
-            android:orientation="vertical"
-            android:paddingBottom="4dp"
-            android:weightSum="10">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="68dp"
-                android:layout_weight="6"
-                android:padding="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="8"
+                android:padding="16dp"
                 android:src="@drawable/fox"
-                app:civ_border_color="#FF000000"
-                app:civ_border_width="2dp" />
+                app:civ_border_color="#E4DBDB"
+                app:civ_border_width="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_weight="2"
-                android:orientation="horizontal"
-                android:weightSum="6">
-
-                <TextView
-                    android:id="@+id/appreciate_count"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:gravity="center|bottom"
-                    android:paddingBottom="10dp"
-                    android:text="101"
-                    android:textColor="#070707" />
-
-                <TextView
-                    android:id="@+id/followers_count"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:gravity="center|bottom"
-                    android:paddingBottom="10dp"
-                    android:text="200"
-                    android:textColor="#070707" />
-
-                <TextView
-                    android:id="@+id/following_count"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:gravity="center|bottom"
-                    android:paddingBottom="10dp"
-                    android:text="300"
-                    android:textColor="#070707" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/appreciate_count"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:orientation="horizontal"
-                android:weightSum="6">
+                android:fontFamily="@font/halant_light"
+                android:gravity="center|bottom"
+                android:paddingBottom="10dp"
+                android:text="4.5"
+                android:textColor="#f7f7f7"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/appreciate"
+                app:layout_constraintEnd_toEndOf="@+id/appreciate"
+                app:layout_constraintStart_toStartOf="@+id/appreciate" />
 
-                <TextView
-                    android:id="@+id/appreciate"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:gravity="center|bottom"
-                    android:paddingBottom="10dp"
-                    android:text="appreciation"
-                    android:textColor="#070707" />
+            <TextView
+                android:id="@+id/followers_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center|bottom"
+                android:paddingBottom="10dp"
+                android:text="200"
+                android:textColor="#f7f7f7"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/followers"
+                app:layout_constraintEnd_toEndOf="@+id/followers"
+                app:layout_constraintStart_toStartOf="@+id/followers" />
 
-                <TextView
-                    android:id="@+id/followers"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:gravity="center|bottom"
-                    android:paddingBottom="10dp"
-                    android:text="followers"
-                    android:textColor="#070707" />
+            <TextView
+                android:id="@+id/following_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center|bottom"
+                android:paddingBottom="10dp"
+                android:text="300"
+                android:textColor="#f7f7f7"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/following"
+                app:layout_constraintEnd_toEndOf="@+id/following"
+                app:layout_constraintStart_toStartOf="@+id/following" />
 
-                <TextView
-                    android:id="@+id/following"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:gravity="center|bottom"
-                    android:paddingBottom="10dp"
-                    android:text="following"
-                    android:textColor="#070707" />
-            </LinearLayout>
-        </LinearLayout>
+            <TextView
+                android:id="@+id/appreciate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center|bottom"
+                android:paddingBottom="10dp"
+                android:text="Rating"
+                android:textColor="#f7f7f7"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/following"
+                app:layout_constraintEnd_toStartOf="@+id/following"
+                app:layout_constraintHorizontal_bias="0.451"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center|bottom"
+                android:paddingBottom="10dp"
+                android:text="Followers"
+                android:textColor="#f7f7f7"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/following"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/following" />
+
+            <TextView
+                android:id="@+id/following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center|bottom"
+                android:paddingBottom="10dp"
+                android:text="Following"
+                android:textColor="#f7f7f7"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Mr.Fox"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/following_count"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/notes_recycler_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

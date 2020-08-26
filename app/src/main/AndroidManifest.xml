@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".SearchNotes"></activity>
         <activity android:name=".Add_notes" />
-        <activity android:name=".Profile" />
+        <activity android:name=".Profile"  android:theme="@style/Theme.AppCompat.NoActionBar"  />
         <activity
             android:name=".SignUpActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
